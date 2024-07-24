@@ -1,14 +1,14 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return HttpResponse("<h1>Prueba</h1><h2>Portada</h2>")
+    return render(request, "core/home.html")
 
 def about(request):
-    return HttpResponse("<h1>About me:</h1><p1>Hello, my name is Ricardo Gobbi and I'm a Python developer.</p1>")
+    return render(request, "core/about.html")
 
 def portfolio(request):
-    return HttpResponse("<h1>My projects</h1><p1>This are my projects:</p1>")
+    return render(request, "core/portfolio.html")
 
 def contact(request):
-    return HttpResponse("<h1>Contacto</h1><p1>ricky.gobbi1994@gmail.com</p1>")
+    return render(request, "core/contact.html")
